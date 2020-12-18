@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-resource-backend
+spec:
+  # defaultBackend:
+  #   resource:
+  #     apiGroup: k8s.example.com
+  #     kind: StorageBucket
+  #     name: static-assets
+  rules:
+    - http:
+        paths:
+          - path: /api/data
+            pathType: ImplementationSpecific
+            backend:
+              serviceName: django-api
+              servicePort: 8000
