@@ -8,7 +8,10 @@ spec:
     app: angular-ui
     tier: frontend
   ports:
-    - port: 80
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
 
 ---
 apiVersion: apps/v1

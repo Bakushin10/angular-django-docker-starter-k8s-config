@@ -15,7 +15,7 @@ this lets you use minikube docker registry instead of your local docker registry
 
 ### build your image
 - `docker build -t IMAGE_NAME` .
-
+ 
 
 
 
